@@ -6,7 +6,7 @@ import "./App.css";
 class App extends Component {
   state = {
     value: "",
-    data: "",
+    randomNumber: "",
     id: "",
     name: "",
     height: "",
@@ -38,16 +38,23 @@ class App extends Component {
       })
       .then(response => response.json())
       .then(data => {
-        this.setState({
+        this.setState(prevState => ({
+          randomNumber: this.randomNumberId,
+          id: data.id,
+          name: data.name,
+          height: data.height,
+          weight: data.weight,
+          base_experience: data.base_experience,
+          abilities: data.abilities[0].ability.name,
+          images: data.sprites.front_default,
           err: false,
-          data: data.result,
-        });
+        }))
       })
       .catch(err => {
-        console.log(err + " something was wrong");
-        this.setState ({
-          err: true
-        });
+        console.log(err)
+        this.setState(prevState => ({
+          err: true,
+        }))
       })
     }
   handlePokemonSubmit = e => {
@@ -64,16 +71,22 @@ class App extends Component {
       })
       .then(response => response.json())
       .then(data => {
-        this.setState({
+        this.setState(prevState => ({
+          id: data.id,
+          name: data.name,
+          height: data.height,
+          weight: data.weight,
+          base_experience: data.base_experience,
+          abilities: data.abilities[0].ability.name,
+          images: data.sprites.front_default,
           err: false,
-          data: data.result,
-        });
+        }))
       })
       .catch(err => {
-        console.log(err + " something was wrong");
-        this.setState ({
-          err: true
-        });
+        console.log(err)
+        this.setState(prevState => ({
+          err: true,
+        }))
       })
   }
 
@@ -87,7 +100,7 @@ class App extends Component {
           click={this.handleClickRnd}
         />
         <Result
-          error={this.state.err}/>
+          pokemon={this.state}/>
       </>
     );
   }
