@@ -74,8 +74,8 @@ class App extends Component {
           images: [
             { name: "front default", id: 0, src: data.sprites.front_default },
             { name: "back default", id: 1, src: data.sprites.back_default },
-            { name: "front female", id: 2, src: data.sprites.front_female },
-            { name: "back female", id: 3, src: data.sprites.back_female }
+            // { name: "front female", id: 2, src: data.sprites.front_female },
+            // { name: "back female", id: 3, src: data.sprites.back_female }
           ],
           err: false
         }));
@@ -112,8 +112,8 @@ class App extends Component {
           images: [
             { name: "front default", id: 0, src: data.sprites.front_default },
             { name: "back default", id: 1, src: data.sprites.back_default },
-            { name: "front female", id: 2, src: data.sprites.front_female },
-            { name: "back female", id: 3, src: data.sprites.back_female }
+            // { name: "front female", id: 2, src: data.sprites.front_female },
+            // { name: "back female", id: 3, src: data.sprites.back_female }
           ],
           err: false
         }));
