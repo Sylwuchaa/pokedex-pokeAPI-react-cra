@@ -9,8 +9,9 @@ import "./App.css";
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+
   background-image: linear-gradient(
     to right top,
     #051937,
@@ -26,7 +27,7 @@ const StyledWrapper = styled.div`
   text-align: center;
   margin: 0 auto;
   color: white;
-  text-shadow: 2px 2px black;
+  font-size: 1rem;
 `;
 class App extends Component {
   state = {
