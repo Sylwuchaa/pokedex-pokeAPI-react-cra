@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 const ImgBox = styled.div`
-  margin: 1.5rem;
+  margin: 1.6rem;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
