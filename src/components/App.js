@@ -9,7 +9,7 @@ import "./App.css";
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 
   background-image: linear-gradient(
@@ -73,8 +73,8 @@ class App extends Component {
           base_experience: data.base_experience,
           abilities: data.abilities[0].ability.name,
           images: [
-            { name: "front default", id: 0, src: data.sprites.front_default },
-            { name: "back default", id: 1, src: data.sprites.back_default },
+            { name: "front", id: 0, src: data.sprites.front_default },
+            { name: "back", id: 1, src: data.sprites.back_default },
             // { name: "front female", id: 2, src: data.sprites.front_female },
             // { name: "back female", id: 3, src: data.sprites.back_female }
           ],
@@ -111,8 +111,8 @@ class App extends Component {
           base_experience: data.base_experience,
           abilities: data.abilities[0].ability.name,
           images: [
-            { name: "front default", id: 0, src: data.sprites.front_default },
-            { name: "back default", id: 1, src: data.sprites.back_default },
+            { name: "front", id: 0, src: data.sprites.front_default },
+            { name: "back", id: 1, src: data.sprites.back_default },
             // { name: "front female", id: 2, src: data.sprites.front_female },
             // { name: "back female", id: 3, src: data.sprites.back_female }
           ],

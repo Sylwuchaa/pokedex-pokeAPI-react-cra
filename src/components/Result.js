@@ -18,12 +18,6 @@ const ListItem = styled.li`
   text-align: left;
 
 `
-
-
-
-
-
-
 const Result = (props) => {
   const { id, name, height, weight, base_experience, abilities, err, value} = props.pokemon
   let data = null;

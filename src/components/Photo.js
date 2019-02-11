@@ -1,5 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
+const ImgBox = styled.div`
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
 
+`;
+
+const ImgItem = styled.img`
+  align-self: flex-start;
+  width: 180px;
+  height: 180px;
+
+
+
+`;
 
 const Photo = (props) => {
 
@@ -7,14 +24,14 @@ const Photo = (props) => {
     <>
     <div key={img.id}>
       <h4>{img.name}</h4>
-      <img src={img.src} alt={img.name}/>
+      <ImgItem src={img.src} alt={img.name}/>
     </div>
     </>
     ))
     return (
-      <div>
+      <ImgBox>
         {imgs}
-      </div>
+      </ImgBox>
     )
 
 }

@@ -1,8 +1,17 @@
 import React from 'react';
 import styled, { keyframes } from "styled-components";
 
-const SearchInput = styled.input`
 
+const FormBox = styled.div`
+  margin: 1.5rem;
+  display: flex;
+  align-self: center;
+
+
+`;
+
+const SearchInput = styled.input`
+  align-self: flex-start;
   margin: 5px;
   font-family: 'Montserrat', sans-serif;
   width: 0;
@@ -64,13 +73,13 @@ const Button = styled.button`
 
 const Form = (props) => {
   return (
-  <>
+
+  <FormBox>
     <form onSubmit={props.submit}>
       <SearchInput type="text" name="search" placeholder="Pokemon name or id" value={props.value} onChange={props.change}/>
       <Button onClick={props.click}></Button>
     </form>
-
-  </>
+  </FormBox>
   )
 }
 
