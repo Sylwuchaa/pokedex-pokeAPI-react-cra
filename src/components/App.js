@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import {BrowserRouter, Link} from "react-router-dom"
 import Result from "./Result";
 import Form from "./Form";
 import Title from "./Title";
 import Photo from "./Photo";
+import Footer from "./Footer";
 import "./App.css";
 
 const StyledWrapper = styled.div`
@@ -129,6 +131,7 @@ class App extends Component {
 
   render() {
     return (
+      <BrowserRouter>
       <StyledWrapper>
         <Title />
         <Form
@@ -139,7 +142,9 @@ class App extends Component {
         />
         <Result pokemon={this.state} />
         <Photo photo={this.state} />
+        <Footer />
       </StyledWrapper>
+      </BrowserRouter>
     );
   }
 }
