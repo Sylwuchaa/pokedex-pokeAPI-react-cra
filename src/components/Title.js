@@ -1,6 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import {BrowserRouter, Link} from "react-router-dom"
+
+const Wrapper = styled.div`
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-self: flex-start;
+
+`
 const Header = styled.h1`
   display: flex;
   align-self: flex-start;
@@ -11,7 +21,6 @@ const Header = styled.h1`
   align-self: baseline;
   font-size: 1.8rem;
   text-shadow: 3px 3px #FA3E5C;
-
 `
 
 const StyledLink = styled(Link)`
@@ -26,13 +35,15 @@ const StyledLink = styled(Link)`
   transition: ease-in-out .8s;
 
   :hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
 `
 
 const Title = () => (
     <>
-    <StyledLink exact to={'/'} ><Header>Pokedex</Header></StyledLink>
+    <Wrapper>
+      <StyledLink exact to={'/'} ><Header>Pokedex</Header></StyledLink>
+    </Wrapper>
     </>
 )
 

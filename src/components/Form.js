@@ -3,12 +3,10 @@ import styled, { keyframes } from "styled-components";
 
 
 const FormBox = styled.div`
-  margin: 1.5rem;
+  margin: 2rem;
   display: flex;
   align-self: center;
-
-
-`;
+`
 
 const SearchInput = styled.input`
   align-self: flex-start;

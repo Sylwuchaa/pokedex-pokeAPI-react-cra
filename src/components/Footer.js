@@ -3,12 +3,13 @@ import {BrowserRouter, Link} from "react-router-dom";
 import styled from 'styled-components';
 import posed from 'react-pose';
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.footer`
   display: flex;
   width: 100%;
+  height: 410px;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: flex-end
+  align-items: flex-end;
 `
 
 const StyledLink = styled(Link)`

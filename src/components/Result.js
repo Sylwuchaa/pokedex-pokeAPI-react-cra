@@ -18,6 +18,13 @@ const ListItem = styled.li`
   text-align: left;
 
 `
+
+const H2 = styled.h2`
+
+  margin: .5rem;
+
+
+`
 const Result = (props) => {
   const { id, name, height, weight, base_experience, abilities, err, value} = props.pokemon
   let data = null;
@@ -41,7 +48,7 @@ const Result = (props) => {
 
   return (
     <>
-      <h2>Results for Pokemon: {name}</h2>
+      <H2>Results for Pokemon: {name}</H2>
       <ListBox>
       {err ? `We do not have a "${value}" in the database :(` : data }
       </ListBox>
